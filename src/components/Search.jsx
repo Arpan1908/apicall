@@ -40,7 +40,12 @@ function Search() {
           <li>No results found.</li>
         ) : (
           filteredPhotos.map(photo => (
-            <li key={photo.id}>{photo.title}</li>
+            <li key={photo.id}><img
+            src={photo.thumbnailUrl}
+            className="image"
+            alt={photo.title}
+          />
+          <span>{photo.title}</span></li>
           ))
         )}
       </ul>
